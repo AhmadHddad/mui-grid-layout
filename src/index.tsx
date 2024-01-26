@@ -17,10 +17,6 @@ export interface BreakpointSizes {
   [key: string]: string | undefined;
 }
 
-const gridRootClassName = '_grid-root';
-const gridItemClassName = '_grid-item';
-const gridContainerClassName = '_grid-container';
-
 export type GridProps<
   K extends keyof JSX.IntrinsicElements = keyof JSX.IntrinsicElements
 > = {
@@ -69,6 +65,10 @@ export type GridProps<
 } & ComponentProps<K>;
 
 export type Grid = React.FC<GridProps>;
+
+const gridRootClassName = '_grid-root';
+const gridItemClassName = '_grid-item';
+const gridContainerClassName = '_grid-container';
 
 const defaultBreakpoints: BreakpointSizes = {
   xs: '0px',
