@@ -1,11 +1,33 @@
 {
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
     "src"
+  ],
+  "description": "A lightweight and customizable grid layout component for React, inspired by Material-UI's Grid system.",
+  "repository": "https://github.com/AhmadHddad/mui-grid-layout",
+  "bugs": "https://github.com/AhmadHddad/mui-grid-layout/issues",
+  "keywords": [
+    "grid",
+    "layout",
+    "mui",
+    "mui-grid",
+    "grid-layout",
+    "flex",
+    "flex-box",
+    "AhmadHddad",
+    "hd",
+    "hd-utils",
+    "react",
+    "material-ui",
+    "responsive",
+    "flexible",
+    "component",
+    "ui",
+    "grid system"
   ],
   "engines": {
     "node": ">=10"
