@@ -29,6 +29,8 @@ export type GridProps<
   sx?: Partial<CSSProperties>;
   spacing?: number;
   gap?: number;
+  placeItems?: CSSProperties['placeItems'];
+  placeContent?: CSSProperties['placeContent'];
   display?: CSSProperties['display'];
   boxSizing?: CSSProperties['boxSizing'];
   flexGrow?: CSSProperties['flexGrow'];
@@ -124,6 +126,8 @@ function makeStyle<K extends keyof JSX.IntrinsicElements>(
         gap: ${condition(props.gap, handleStyle(props.gap!))};
         display: ${condition(props.display, props.display)};
         box-sizing: ${condition(props.boxSizing, props.boxSizing)};
+        place-items: ${condition(props.placeItems, props.placeItems )};
+        place-content: ${condition(props.placeContent, props.boxSizing)};
         flex-direction: ${condition(props.flexDirection, props.flexDirection)};
         flex-basis: ${condition(props.flexBasis, props.flexBasis)};
         flex-grow: ${condition(props.flexGrow, props.flexGrow)};
@@ -214,7 +218,7 @@ function makeStyle<K extends keyof JSX.IntrinsicElements>(
 function GridC<K extends keyof JSX.IntrinsicElements>(
   {
     container,
-    item,
+    item = true,
     xs,
     sm,
     md,
